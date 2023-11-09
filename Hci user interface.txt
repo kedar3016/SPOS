@@ -1,0 +1,23 @@
+import tkinter as tk
+
+# Create a window
+window = tk.Tk()
+window.title("Simple UI")
+
+# Create a label
+label = tk.Label(window, text="Hello, World!")
+label.pack()
+
+# Create a button
+button = tk.Button(window, text="Click Me!")
+button.pack()
+
+# Define a function to handle button click
+def on_button_click():
+    label.config(text="Button Clicked!")
+
+# Bind the function to the button click event
+button.config(command=on_button_click)
+
+# Start the main loop
+window.mainloop()
